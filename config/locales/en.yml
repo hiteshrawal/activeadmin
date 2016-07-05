@@ -22,7 +22,7 @@ en:
     has_many_remove: "Remove"
     filters:
       buttons:
-        filter: "Filter"
+        filter: "Apply Filter"
         clear: "Clear Filters"
       predicates:
         contains: "Contains"
