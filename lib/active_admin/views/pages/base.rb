@@ -71,9 +71,9 @@ module ActiveAdmin
 
         def build_page_content
           build_flash_messages
-          div id: "active_admin_content", class: (skip_sidebar? ? "without_sidebar" : "with_sidebar") do
-            build_main_content_wrapper
+          div id: "active_admin_content", class: main_content_classes do
             build_sidebar unless skip_sidebar?
+            build_main_content_wrapper
           end
         end
 
@@ -139,6 +139,17 @@ module ActiveAdmin
         # Renders the content for the footer
         def build_footer
           insert_tag view_factory.footer
+        end
+
+        def main_content_classes
+          classes = Arbre::HTML::ClassList.new
+          if skip_sidebar?
+            classes << "without_sidebar"
+          else
+            classes << "with_sidebar"
+            classes << "left_sidebar"
+          end
+          classes
         end
 
       end

@@ -1,0 +1,43 @@
+body.active_admin {
+  #active_admin_content.left_sidebar {
+    #sidebar {
+      display: block;
+      margin-left: 0;
+    }
+
+    .paginated_collection_contents {
+      clear: none;
+      float: left;
+      width: 100%;
+    }
+
+    .blank_slate_container {
+      clear: none;
+    }
+
+    .columns {
+      clear: none;
+    }
+
+    #main_content_wrapper {
+      float: inherit;
+      margin-left: 300px;
+      width: auto;
+      #main_content {
+        float: inherit;
+        margin: 0;
+        .tabs .comments {
+          .active_admin_comment {
+            clear: none;
+          }
+        }
+      }
+
+    }
+
+    .table_tools:after {
+      clear: none;
+      padding-bottom: 16px;
+    }
+  }
+}
